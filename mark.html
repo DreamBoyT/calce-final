@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calce</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img1.jpg');
+      /* border-color: white; */
+      /* background-image:  url('img2.jpg'); */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    header {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .s {
+      margin-bottom: 5px;
+      margin-left: 180px;
+      width: 100%;
+      font-size: 1.4em;
+      line-height: 20px;
+      border-radius: 10px;
+      border: 2px solid #f0ffff;
+      transition: 0.1s ease;
+      max-width: 50%;
+    }
+
+    div.card {
+      /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+      /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+      border: 1px solid grey;
+      background-color: #39A7FF;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+    h4 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+    }
+
+
+
+    @media (max-width: 600px) {
+      body {
+        background-image: linear-gradient(90deg, rgba(0,212,255,1) 15%, rgba(13,122,209,1) 69%);
+        background-color: #39A7FF;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        height: auto;
+      }
+
+      header {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        text-align: center;
+      }
+
+      .s {
+        margin: 10px auto;
+        width: 100%;
+        font-size: 1.2em;
+        line-height: 20px;
+        border-radius: 10px;
+        border: 2px solid #f0ffff;
+        transition: 0.1s ease;
+        height: 40px;
+        text-align: center;
+        padding-bottom: 2px;
+        padding-top: 2px;
+      }
+
+      .ss{
+        margin-top:0;
+        margin-bottom: 0;
+      }
+
+      .card {
+        box-shadow: none;
+        border: none;
+        background-color: #fff;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      h4 {
+        font-size: 18px;
+        margin-left: 20px;
+      }
+
+      .head1 {
+        margin:0;
+        color: white;
+        margin-top: 15px;
+      }
+
+      #yourScore {
+        margin: 20px auto;
+        padding: 15px;
+        font-size: 20px;
+        border-width: 0px;
+        border-color: #CCCCCC;
+        background-color: #fff;
+        color: #000000;
+        border-style: solid;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px rgba(66, 66, 66, .75);
+        text-align: center;
+        width: 80px;
+        height: 12px;
+        margin-top: 0;
+      }
+
+      .buttonClass {
+        font-size: 15px;
+        width: 150px;
+        height: 40px;
+        border-width: 1px;
+        color: #fff;
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+        border-bottom-left-radius: 28px;
+        border-bottom-right-radius: 28px;
+        background: #45474B;
+        transition-duration: 0.4s;
+        margin-top: 10px;
+      }
+
+      .buttonClass:hover {
+        background-color: #272829;
+        color: white;
+      }
+      .t1{
+        margin-left: 0px;
+      }
+      .t2{
+        margin-left: 0px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="card w-50 m-auto text-center">
+      <div class="card-header text-white bg-warning">
+        <h1 class="head1">INTERNAL MARK CALCULATOR</h1>
+      </div>
+      <div class="card-body">
+        <form class=" w-55 m-auto">
+          <div class="form-group ">
+            <h4 class="t1">ENTER YOUR FAT MARKS</h4>
+
+            <input type="text" name="fat1ExamMark" class="form-control text-center s ss" placeholder="FAT-1 Mark" id="fatExam1" autocomplete="off">
+            <input type="text" name="fat2ExamMark" class="form-control text-center s" placeholder="FAT-2 Mark" id="fatExam2" autocomplete="off">
+            <input type="text" name="fat3ExamMark" class="form-control text-center s ss" placeholder="FAT-3 Mark" id="fatExam3" autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <h4 class="t2">ENTER YOUR ASSIGNMENT MARKS</h4>
+
+            <input type="text" name="fat1AssignmentMark" class="form-control text-center s ss" placeholder="Assignment Mark-1" id="fatAssignment1" autocomplete="off">
+            <input type="text" name="fat2AssignmentMark" class="form-control text-center s" placeholder="Assignment Mark-2" id="fatAssignment2" autocomplete="off">
+            <input type="text" name="fat3AssignmentMark" class="form-control text-center s ss" placeholder="Assignment Mark-3" id="fatAssignment3" autocomplete="off">
+          </div>
+        </form> <br>
+        <div class="w-70 m-auto">
+          <button class="btn  btn-secondary w-50 buttonClass" style="font-size: 22px;  font-weight: bold;" id="calculateButton">View Score</button>
+        </div>
+        <br>
+        <div>
+          <input type="text" name="" class="form-control text-center w-25 m-auto" id="yourScore" readonly>
+        </div>
+
+      </div>
+      <!-- <div class="card-footer ">Made by 💥 DreamboyT 💥</div> -->
+    </div>
+
+  </header>
+
+  <script>
+    const calculateButton = document.getElementById('calculateButton');
+    const resultDiv = document.getElementById('result');
+
+    calculateButton.addEventListener('click', () => {
+
+      const fatExam1Mark = parseFloat(document.getElementById('fatExam1').value);
+      if (isNaN(fatExam1Mark) || fatExam1Mark === 0) {
+        alert('Please enter a valid FAT exam mark for FAT Exam 1.');
+        return;
+      }
+
+      const fatExam2Mark = parseFloat(document.getElementById('fatExam2').value);
+      if (isNaN(fatExam2Mark) || fatExam2Mark === 0) {
+        alert('Please enter a valid FAT exam mark for FAT Exam 2.');
+        return;
+      }
+
+      const fatExam3Mark = parseFloat(document.getElementById('fatExam3').value);
+      if (isNaN(fatExam3Mark) || fatExam3Mark === 0) {
+        alert('Please enter a valid FAT exam mark for FAT Exam 3.');
+        return;
+      }
+
+
+      if (fatExam1Mark > 50 || fatExam2Mark > 50 || fatExam3Mark > 50) {
+        alert('FAT exam marks cannot exceed 50.');
+        return;
+      }
+
+
+      const fatAssignment1Mark = parseFloat(document.getElementById('fatAssignment1').value);
+      if (isNaN(fatAssignment1Mark) || fatAssignment1Mark === 0) {
+        alert('Please enter a valid FAT assignment mark for FAT Assignment 1.');
+        return;
+      }
+
+      const fatAssignment2Mark = parseFloat(document.getElementById('fatAssignment2').value);
+      if (isNaN(fatAssignment2Mark) || fatAssignment2Mark === 0) {
+        alert('Please enter a valid FAT assignment mark for FAT Assignment 2.');
+        return;
+      }
+
+      const fatAssignment3Mark = parseFloat(document.getElementById('fatAssignment3').value);
+      if (isNaN(fatAssignment3Mark) || fatAssignment3Mark === 0) {
+        alert('Please enter a valid FAT assignment mark for FAT Assignment 3.');
+        return;
+      }
+
+
+      if (fatAssignment1Mark > 50 || fatAssignment2Mark > 50 || fatAssignment3Mark > 50) {
+        alert('FAT assignment marks cannot exceed 50.');
+        return;
+      }
+
+
+      const averageFatExamMarks = (fatExam1Mark + fatExam2Mark + fatExam3Mark) / 3;
+      const averageFatAssignmentMarks = (fatAssignment1Mark + fatAssignment2Mark + fatAssignment3Mark) / 3;
+
+      document.getElementById('yourScore').value = (0.56 * (fatExam1Mark + fatExam2Mark + fatExam3Mark) / 3 + 0.24 * (fatAssignment1Mark + fatAssignment2Mark + fatAssignment3Mark) / 3).toFixed(2);
+    });
+
+    const mediaQuery = matchMedia("(max-width: 600px)");
+
+    if (mediaQuery.matches) {
+      const bootstrapLink = document.querySelector('link[rel="stylesheet"][href*="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"]');
+      if (bootstrapLink) {
+        bootstrapLink.parentNode.removeChild(bootstrapLink);
+      }
+    } else {
+      mediaQuery.addEventListener('change', (event) => {
+        if (event.matches) {
+          const bootstrapLink = document.querySelector('link[rel="stylesheet"][href*="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"]');
+          if (bootstrapLink) {
+            bootstrapLink.parentNode.removeChild(bootstrapLink);
+          }
+        } else {
+          // Re-add the Bootstrap CSS link when the screen size increases
+          const bootstrapLink = document.createElement('link');
+          bootstrapLink.rel = 'stylesheet';
+          bootstrapLink.href = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+          document.head.appendChild(bootstrapLink);
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>-
